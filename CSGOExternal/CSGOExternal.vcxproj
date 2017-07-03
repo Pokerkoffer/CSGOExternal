@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{126400F0-6CD4-4BE7-87B2-E794DBE4164B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CSGOExternal</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\Binaries\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\Objects\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Platform)_$(Configuration)</TargetName>
+    <IncludePath>$(DXSDK_DIR)INCLUDE;$(MSBuildProjectDirectory)\;$(MSBuildProjectDirectory)\Libraries;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)LIB\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\Binaries\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\Objects\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_$(Platform)_$(Configuration)</TargetName>
+    <IncludePath>$(DXSDK_DIR)INCLUDE;$(MSBuildProjectDirectory)\;$(MSBuildProjectDirectory)\Libraries;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)LIB\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config\DumpConfig.h" />
+    <ClInclude Include="Dumper\Dumper.h" />
+    <ClInclude Include="Dumper\NetVarDumper.h" />
+    <ClInclude Include="Dumper\SignatureDumper.h" />
+    <ClInclude Include="Game\Game.h" />
+    <ClInclude Include="Hack\AIM.h" />
+    <ClInclude Include="Hack\BHOP.h" />
+    <ClInclude Include="Hack\ESP.h" />
+    <ClInclude Include="Hack\FAKELAG.h" />
+    <ClInclude Include="Hack\FLASH.h" />
+    <ClInclude Include="Hack\Hack.h" />
+    <ClInclude Include="Hack\RECOIL.h" />
+    <ClInclude Include="Hack\SDK.h" />
+    <ClInclude Include="Hack\TRIGGER.h" />
+    <ClInclude Include="Overlay\Color.h" />
+    <ClInclude Include="Overlay\D3D9Overlay.h" />
+    <ClInclude Include="Overlay\D3D9Surface.h" />
+    <ClInclude Include="Overlay\Overlay.h" />
+    <ClInclude Include="Overlay\Surface.h" />
+    <ClInclude Include="Remote\Module.h" />
+    <ClInclude Include="Remote\Process.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Util\ColorUtil.h" />
+    <ClInclude Include="Util\Vector2.h" />
+    <ClInclude Include="Util\Vector3.h" />
+    <ClInclude Include="Util\Vector4.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Config\DumpConfig.cpp" />
+    <ClCompile Include="CSGOExternal.cpp" />
+    <ClCompile Include="Dumper\Dumper.cpp" />
+    <ClCompile Include="Dumper\NetVarDumper.cpp" />
+    <ClCompile Include="Dumper\SignatureDumper.cpp" />
+    <ClCompile Include="Game\Game.cpp" />
+    <ClCompile Include="Hack\AIM.cpp" />
+    <ClCompile Include="Hack\BHOP.cpp" />
+    <ClCompile Include="Hack\ESP.cpp" />
+    <ClCompile Include="Hack\FAKELAG.cpp" />
+    <ClCompile Include="Hack\FLASH.cpp" />
+    <ClCompile Include="Hack\Hack.cpp" />
+    <ClCompile Include="Hack\RECOIL.cpp" />
+    <ClCompile Include="Hack\SDK.cpp" />
+    <ClCompile Include="Hack\TRIGGER.cpp" />
+    <ClCompile Include="Overlay\Color.cpp" />
+    <ClCompile Include="Overlay\D3D9Overlay.cpp" />
+    <ClCompile Include="Overlay\D3D9Surface.cpp" />
+    <ClCompile Include="Overlay\Overlay.cpp" />
+    <ClCompile Include="Overlay\Surface.cpp" />
+    <ClCompile Include="Remote\Module.cpp" />
+    <ClCompile Include="Remote\Process.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Util\ColorUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json">
+      <DeploymentContent>false</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{3742a00e-f50a-4dd4-a89b-b8cbd4cb88cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dumper">
+      <UniqueIdentifier>{c06ebbbe-d1f1-4b74-8ed9-25f9737162c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Remote">
+      <UniqueIdentifier>{8487f0d3-ce47-44ac-95cc-86c7b186ea88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{8ec0c5d2-0df5-42bb-846c-94547708b774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dumper">
+      <UniqueIdentifier>{74402974-f2c3-4853-8fba-3e141f776d7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Remote">
+      <UniqueIdentifier>{b2284380-86d7-496e-afb3-3fab8b28b799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Config">
+      <UniqueIdentifier>{d6ca58bf-74de-48d5-aa53-9521c1c0451c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Config">
+      <UniqueIdentifier>{91ec19a5-f9e1-41a8-a39d-ec0079ea83e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Hack">
+      <UniqueIdentifier>{400bc36a-fbfe-44cc-8440-2bfafe94621c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Hack">
+      <UniqueIdentifier>{b9de1ad2-a3cf-4a8f-a382-9ac717ddf57e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Util">
+      <UniqueIdentifier>{a751e8ff-87a7-42b5-83fd-a7b0740eff03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Util">
+      <UniqueIdentifier>{95ac066b-d740-437a-8355-8b40d09750e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Overlay">
+      <UniqueIdentifier>{7f8c88af-cd0c-40d7-840d-c9841f0d7eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Overlay">
+      <UniqueIdentifier>{cb591806-4e52-476a-8043-a46ba44286b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Game.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Dumper\Dumper.h">
+      <Filter>Header Files\Dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="Dumper\NetVarDumper.h">
+      <Filter>Header Files\Dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="Dumper\SignatureDumper.h">
+      <Filter>Header Files\Dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="Remote\Module.h">
+      <Filter>Header Files\Remote</Filter>
+    </ClInclude>
+    <ClInclude Include="Remote\Process.h">
+      <Filter>Header Files\Remote</Filter>
+    </ClInclude>
+    <ClInclude Include="Config\DumpConfig.h">
+      <Filter>Header Files\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\Hack.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\SDK.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\ColorUtil.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Vector2.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Vector3.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Vector4.h">
+      <Filter>Header Files\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\ESP.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\BHOP.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\FLASH.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\FAKELAG.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\Color.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\D3D9Overlay.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\D3D9Surface.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\Overlay.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Overlay\Surface.h">
+      <Filter>Header Files\Overlay</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\RECOIL.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\TRIGGER.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack\AIM.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSGOExternal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Game.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper\Dumper.cpp">
+      <Filter>Source Files\Dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper\NetVarDumper.cpp">
+      <Filter>Source Files\Dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper\SignatureDumper.cpp">
+      <Filter>Source Files\Dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="Remote\Module.cpp">
+      <Filter>Source Files\Remote</Filter>
+    </ClCompile>
+    <ClCompile Include="Remote\Process.cpp">
+      <Filter>Source Files\Remote</Filter>
+    </ClCompile>
+    <ClCompile Include="Config\DumpConfig.cpp">
+      <Filter>Source Files\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\Hack.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\ColorUtil.cpp">
+      <Filter>Source Files\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\ESP.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\SDK.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\BHOP.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\FLASH.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\FAKELAG.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\Color.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\D3D9Overlay.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\D3D9Surface.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\Overlay.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Overlay\Surface.cpp">
+      <Filter>Source Files\Overlay</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\RECOIL.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\TRIGGER.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\AIM.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json" />
+  </ItemGroup>
+</Project>
