@@ -96,6 +96,7 @@
     <ClInclude Include="Game\Game.h" />
     <ClInclude Include="Hack\AIM.h" />
     <ClInclude Include="Hack\BHOP.h" />
+    <ClInclude Include="Hack\CLANTAG.h" />
     <ClInclude Include="Hack\ESP.h" />
     <ClInclude Include="Hack\FAKELAG.h" />
     <ClInclude Include="Hack\FLASH.h" />
@@ -126,6 +127,7 @@
     <ClCompile Include="Game\Game.cpp" />
     <ClCompile Include="Hack\AIM.cpp" />
     <ClCompile Include="Hack\BHOP.cpp" />
+    <ClCompile Include="Hack\CLANTAG.cpp" />
     <ClCompile Include="Hack\ESP.cpp" />
     <ClCompile Include="Hack\FAKELAG.cpp" />
     <ClCompile Include="Hack\FLASH.cpp" />

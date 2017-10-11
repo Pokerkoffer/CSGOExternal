@@ -141,6 +141,9 @@
     <ClInclude Include="Hack\AIM.h">
       <Filter>Header Files\Hack</Filter>
     </ClInclude>
+    <ClInclude Include="Hack\CLANTAG.h">
+      <Filter>Header Files\Hack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -213,6 +216,9 @@
       <Filter>Source Files\Hack</Filter>
     </ClCompile>
     <ClCompile Include="Hack\AIM.cpp">
+      <Filter>Source Files\Hack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack\CLANTAG.cpp">
       <Filter>Source Files\Hack</Filter>
     </ClCompile>
   </ItemGroup>

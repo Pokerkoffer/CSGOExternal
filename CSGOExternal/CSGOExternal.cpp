@@ -16,6 +16,8 @@
 #include <Hack\RECOIL.h>
 #include <Hack\TRIGGER.h>
 #include <Hack\AIM.h>
+#include <Hack\CLANTAG.h>
+#include <Hack\SDK.h>
 
 Overlay::CD3D9Overlay* pOverlay;
 
@@ -43,6 +45,7 @@ int main()
 	vHacks.push_back (new Hack::CESP (VK_END));
 	vHacks.push_back (new Hack::CFLASH (VK_NEXT));
 	vHacks.push_back (new Hack::CFAKELAG (VK_UP));
+	vHacks.push_back (new Hack::CCLANTAG (VK_F11));
 
 	vThreads.push_back (std::thread ([]()
 	{

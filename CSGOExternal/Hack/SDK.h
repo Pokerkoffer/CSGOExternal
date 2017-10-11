@@ -571,6 +571,8 @@ namespace Game {
 		static bool RayTrace (Util::Vector3 leftBottom, Util::Vector3 rightTop, float& fDistance);
 
 		template <typename _Ty> static _Ty Random (Util::Vector2 vRange);
+
+		static void SetClanTag (const char* tag, const char* name);
 	};
 
 	template<typename _Ty>
