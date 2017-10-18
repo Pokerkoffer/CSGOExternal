@@ -8,9 +8,27 @@ namespace Config {
 		this->m_pSignatures = new std::vector<CSignature> ();
 		this->m_pNetVars = new std::vector<CNetVar> ();
 
-		std::ifstream ifs ("config.json");
-		rapidjson::IStreamWrapper isw (ifs);
-		this->m_pConfig->ParseStream (isw);
+		auto hInstance = GetModuleHandle (NULL);
+		if (!hInstance)
+			throw 1;
+
+		auto hResource = FindResource (hInstance, MAKEINTRESOURCE (IDR_CONFIG1), "Config");
+		if (!hResource)
+			throw 1;
+
+		auto hLoadedResource = LoadResource (hInstance, hResource);
+		if (!hLoadedResource)
+			throw 1;
+
+		auto pLockedResource = LockResource (hLoadedResource);
+		if (!pLockedResource)
+			throw 1;
+
+		auto dwResourceSize = SizeofResource (hInstance, hResource);
+		if (dwResourceSize == 0)
+			throw 1;
+
+		this->m_pConfig->Parse ((std::string ((LPCTSTR)pLockedResource)).c_str ());
 
 		auto pSignatures = this->m_pConfig->GetObject ().FindMember ("Signatures");
 		for (auto& pSig : pSignatures->value.GetObject ()) {
@@ -60,10 +78,22 @@ namespace Config {
 
 	CDumpConfig::~CDumpConfig ()
 	{
-		std::ofstream ofs ("config.json");
-		rapidjson::OStreamWrapper osw (ofs);
-		rapidjson::Writer<rapidjson::OStreamWrapper> writer (osw);
-		this->m_pConfig->Accept (writer);
+		auto hInstance = GetModuleHandle (NULL);
+		if (hInstance) {
+			auto hResource = FindResource (hInstance, MAKEINTRESOURCE (IDR_CONFIG1), "Config");
+			if (hResource) {
+				auto hLoadedResource = LoadResource (hInstance, hResource);
+				if (hLoadedResource) {
+					auto pLockedResource = LockResource (hLoadedResource);
+					if (pLockedResource) {
+						auto dwResourceSize = SizeofResource (hInstance, hResource);
+						if (dwResourceSize != 0) {
+							//TODO Update Resource.
+						}
+					}
+				}
+			}
+		}
 
 		this->m_pNetVars->clear ();
 		this->m_pSignatures->clear ();
